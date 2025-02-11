@@ -1,0 +1,554 @@
+/* Estilo base */
+body {
+  font-family:'Space Mono', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fbf5e3;
+  
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1{
+  font-family:'Space Mono', serif;
+}
+
+ h2, h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #222;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin:0;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+  
+  nav ul li {
+    position: relative;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffe3e0;
+  }
+  
+  nav ul li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ffe3e0;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  nav ul li:hover::after {
+    width: 100%;
+  }
+  
+  
+  #hero {
+    color: rgb(6, 3, 3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    position: relative;
+    flex-wrap: wrap;
+      background: linear-gradient(to bottom, #ffffff, transparent);
+      margin: 2rem;
+      
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  .hero-placeholder {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    position:relative;
+    margin-top: 20px;
+    margin-right: 100px;
+    z-index: 10px;
+}
+
+#about {
+  padding: 1rem 0;
+  background: #fbf5e3;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.about-skills {
+  background: bisque;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-header {
+  display: flex;
+  justify-content: space-between; /* Separa el título y la imagen */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 1rem; /* Espacio entre el header y la lista */
+}
+
+.skills-header h3 {
+  margin: 0; /* Elimina el margen predeterminado del h3 */
+}
+
+.skills-header img {
+  max-height: 150px;
+  filter: grayscale(100%);
+}
+
+.imagenCamara {
+  max-width: 150px;
+  height: auto;
+  margin-left: 1rem; /* Espacio entre el título y la imagen */
+  filter: saturate(75%);
+}
+.about-skills ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas para los ítems */
+  list-style: none;
+  padding: 10px;
+  gap: 1rem;
+}
+
+.about-skills li {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+  
+  .about-img-placeholder {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content:left;
+  }
+  
+/* Contenedor principal para Experiencia y Educación */
+#experience-education {
+  display: flex;
+  gap: 2rem; /* Espacio entre Experiencia y Educación */
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* Estilo para el contenedor de Experiencia (manteniendo el estilo original) */
+.experience-container {
+  flex: 1; /* Ocupa el mismo espacio que Educación */
+  background: #fbf5e3;
+  padding: 1.5rem;
+
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
+  gap: 3rem; /* Espacio entre los elementos */
+}
+
+.experience-item {
+  background-image: url(img/image\ 3.png); /* Fondo original */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px); /* Efecto hover original */
+}
+
+.experience-item .date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para el contenedor de Educación */
+.education-container {
+  flex: 1; /* Ocupa el mismo espacio que Experiencia */
+  background: #fbf5e3;
+  padding: 1.5rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+  gap: 1rem; /* Espacio entre los elementos */
+}
+
+.education-item {
+  background: bisque;
+  padding: 1rem;
+
+}
+
+
+  .contact-info {
+    font-size: 1.1rem;
+    font-family: Poppins;
+  }
+  
+
+  
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  #gallery-analog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: #ffffff;
+    position: relative;
+  }
+  
+  #gallery-analog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: #fbf5e3;
+    position: relative;
+  }
+  
+  .gallery-analog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    gap: 2rem; /* Space between columns */
+    max-width: 1200px; /* Adjusted for three columns */
+    width: 100%;
+    align-items: center; /* Vertically center content */
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 4px 2px 4px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+  }
+  
+  /* Carousel Column */
+  .carousel-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 500px;
+  }
+  
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-images img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+
+  }
+  
+  .carousel-btn {
+    background-color: #000000;
+    opacity: 50%;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .carousel-btn.prev {
+    left: 0;
+  }
+  
+  .carousel-btn.next {
+    right: 0;
+  }
+  
+  /* Description Column */
+  .description-column {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding: 1rem;
+    background-color: bisque;
+  }
+  
+  .description h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .description p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Additional Column: Text and CSV Image */
+  .additional-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #ffcdc6;
+  }
+  
+  .additional-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .additional-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .csv-image img {
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  .imagenCamara{
+    max-width: 150px;
+    height: auto;
+    right: 0;
+  }
+  #background{
+    /*This should be a static div 100% by 100% with three scattered images*/
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+  
+  #cup{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    height: 30vh;
+  }
+  
+  #lamp{
+    position: absolute;
+    top: 15%;
+    left: 78%;
+    height: 30vh;
+  }
+/* Media Queries for Responsive Design */
+
+/* For screens smaller than 768px (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  header {
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .logo {
+    margin-bottom: 1rem; /* Add space between logo and nav */
+  }
+nav{
+  display: none;
+}
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 0.5rem; /* Reduce gap between nav items */
+  }
+
+  nav ul li a {
+    font-size: 0.9rem; /* Slightly reduce font size for nav items */
+  }
+
+  /* Hero section adjustments */
+  #hero {
+    padding-left: 1rem; /* Reduce padding */
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text */
+  }
+
+  .hero-content {
+    text-align: center; /* Center-align text */
+  }
+
+  .hero-placeholder {
+    margin-right: 0; /* Remove right margin */
+    margin-top: 1rem; /* Add space between text and image */
+  }
+
+  /* About section adjustments */
+  .about-grid {
+    grid-template-columns: 1fr; /* Stack about text and skills vertically */
+  }
+
+  .about-skills {
+    margin-top: 1rem; /* Add space between about text and skills */
+  }
+
+  /* Experience and Education section adjustments */
+  #experience-education {
+    flex-direction: column; /* Stack experience and education vertically */
+  }
+
+  .experience-container,
+  .education-container {
+    width: 100%; /* Full width for both containers */
+  }
+
+  /* Gallery section adjustments */
+  .gallery-analog-container {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    gap: 1rem; /* Reduce gap between columns */
+  }
+
+  .description-column,
+  .additional-column {
+    text-align: center; /* Center-align text */
+  }
+
+  .carousel-container {
+    max-width: 100%; /* Full width for carousel */
+  }
+
+  .carousel-images img {
+    max-width: 100%; /* Full width for carousel images */
+  }
+
+  /* Contact section adjustments */
+  .contact-info {
+    text-align: center; /* Center-align contact info */
+  }
+}
+
+/* For screens smaller than 480px (e.g., small mobile devices) */
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  nav{
+    display: none;
+  }
+  h1 {
+    font-size: 3rem; /* Reduce font size for main heading */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Reduce font size for subheadings */
+  }
+
+  p {
+    font-size: 1rem; /* Reduce font size for paragraphs */
+  }
+
+  .about-skills ul {
+    grid-template-columns: 1fr; /* Stack skills list items vertically */
+  }
+
+  .experience-grid,
+  .education-grid {
+    grid-template-columns: 1fr; /* Stack items vertically */
+  }
+
+  .experience-item,
+  .education-item {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .carousel-btn {
+    padding: 0.3rem 0.8rem; /* Reduce button padding */
+  }
+}
+
